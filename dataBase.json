@@ -1,0 +1,30 @@
+[
+    {
+        "_id":1,
+        "name": "SAdsk",
+        "age": 19,
+        "phone": 9121133,
+        "address": " Blecker street"
+    },
+    {
+        "_id": 2,
+        "name": "Sam",
+        "age": 19,
+        "phone": 9121133,
+        "address": " ios street"
+    },
+    {
+        "_id": 3,
+        "name": "Wozniak",
+        "age": 19,
+        "phone": 9121133,
+        "address": " Hiko street"
+    },
+    {
+        "_id": 4,
+        "name": "Biostosa",
+        "age": 19,
+        "phone": 9121133,
+        "address": " Biospn street"
+    }
+]
