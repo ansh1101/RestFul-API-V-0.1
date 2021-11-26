@@ -21,48 +21,7 @@ app.use(cors());
 
 // Database CRUD Operations Endpoint  //
 
-const { MongoClient } = require('mongodb');
 
-
-const { MongoClient } = require('mongodb');
-app.post('/DB/Create', (request, response) => {
-  
-
-async function main() {
-    const uri = 'mongodb+srv://adminadmin:adminadmin@studentsdatabase.l0wmf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-
-    const client = new MongoClient(uri);
-
-    try {
-        await client.connect();
-        await listDatabases(client);
-        await createListing(client, request.body);
-
-
-    } catch (e) {
-        console.log(e);
-
-    } finally {
-        await client.close();
-    }
-}
-
-main().catch(console.error)
-
-
-async function listDatabases(client) {
-    databasesList = await client.db().admin().listDatabases();
-
-    console.log("Databases:");
-    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
-};
-
-async function createListing(client, newListing) {
-    const result = await client.db("studentDB").collection("students").insertOne(newListing);
-    console.log(`New listing created with the following id: ${result.insertedId}`);
-}
-response.status(201).send({ Response: "Data was successfully created" });
-});
 // Database Setup with Mongoose //
 
 mongoose.connect("mongodb://localhost:27017/studentdetailsDB");
